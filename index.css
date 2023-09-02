@@ -1,0 +1,349 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: PingFang SC, HarmonyOS_Regular, Helvetica Neue, Microsoft YaHei, sans-serif !important;
+    font-weight: 400;
+    overflow-x: auto;
+    box-sizing: border-box;
+    line-height: 1.25;
+    height: 1500px;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 50px 10px 0 rgba(0, 0, 0, .25);
+}
+
+.nav ul {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 25px;
+}
+
+.nav ul a {
+    display: block;
+    height: 64px;
+    line-height: 64px;
+    color: white;
+    margin-right: 10px;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.search {
+    flex: 1;
+    background-color: rgba(255, 255, 255, .8);
+    border-radius: 8px;
+    padding: 4px 14px;
+    display: flex;
+    align-items: center;
+}
+
+.search:hover {
+    background-color: #fff;
+}
+
+.search input {
+    flex: 1;
+    height: 30px;
+    background: none;
+    outline: none;
+    border: none;
+    margin-right: 14px;
+}
+
+.avatar img {
+    vertical-align: middle;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.actions ul {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-left: 10px;
+    margin-right: 25px;
+}
+
+.actions ul li {
+    padding: 0 10px;
+}
+
+.actions ul li .post {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fb7299;
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+}
+
+.category {
+    display: flex;
+    align-items: center;
+    padding: 0 60px;
+    height: 100px;
+}
+
+.category .left ul {
+    display: flex;
+}
+
+.category li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    font-size: 13px;
+    line-height: 18px;
+    margin-right: 16px;
+}
+
+.category li a .cate_icon {
+    height: 40px;
+    margin-bottom: 6px;
+}
+
+.category li a .cate_icon2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: #f38e8c;
+    margin-bottom: 6px;
+}
+
+.category li a .cate_icon2 .icon-bg--icon {
+    width: 25px;
+    height: 25px;
+}
+
+.category li:nth-child(1) a .cate_icon2 {
+    background-color: #ff9212;
+}
+
+.category li:nth-child(3) a .cate_icon2 {
+    background-color: #6cd083;
+}
+
+.category .middle {
+    width: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(9, 1fr);
+    grid-gap: 10px;
+    grid-template-rows: repeat(2, 1fr);
+    border-right: 2px solid #e3e5e7;
+    padding-right: 20px;
+}
+
+.category .middle a {
+    display: inline-block;
+    box-sizing: content-box;
+    text-align: center;
+    height: 26px;
+    line-height: 26px;
+    border: 1px solid #f1f2f3;
+    background-color: #f6f7f8;
+    letter-spacing: 2px;
+    border-radius: 6px;
+    font-size: 13px;
+    color: #61666d;
+}
+
+.category .right {
+    grid-row-gap: 10px;
+    grid-auto-flow: column;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    flex-shrink: 0;
+}
+
+.category .right a {
+    height: 28px;
+    padding-left: 15px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    color: #61666d;;
+}
+
+.category .right a .cate_icon3 {
+    width: 20px;
+    height: 20px;
+    margin-right: 4px;
+    fill: #61666d;
+}
+
+.main {
+    display: flex;
+    padding: 0 60px;
+}
+
+.main .swiper {
+
+    flex: 1;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.main .swiper .swiper-img {
+    position: relative;
+}
+
+.main .swiper img {
+    width: 100%;
+}
+
+.main .swiper .mask {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    height: 40px;
+    background-image: linear-gradient(
+            transparent, rgba(255, 182, 193, 0.8));
+}
+
+.main .swiper .control {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    background-color: lightpink;
+}
+
+.main .swiper .control .left p {
+    color: white;
+    font-size: 17px;
+}
+
+.main .swiper .control .left li {
+    width: 8px;
+    height: 8px;
+    margin-right: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, .5);
+}
+
+.main .swiper .control .left li:first-child {
+    width: 13px;
+    height: 13px;
+    background-color: white;
+}
+
+.main .swiper .control .right button {
+    padding: 7px 10px;
+    border: none;
+    color: white;
+    background-color: rgba(0, 0, 0, .2);
+    border-radius: 8px;
+}
+
+.main .feed-list {
+    flex: 1;
+}
+
+.main .feed-list .top {
+    position: relative;
+}
+
+.main .feed-list .top .stats {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    padding: 0 6px 4px 6px;
+    font-size: 12px;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+}
+
+.main .feed-list .top .stats span {
+    display: flex;
+    align-items: center;
+}
+
+.main .feed-list .top .stats svg {
+    width: 18px;
+    height: 18px;
+}
+
+.main .feed-list ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main .feed-list ul li {
+    width: 50%;
+}
+
+.main .feed-list ul a {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.main .feed-list li .bottom {
+    padding: 10px 0 15px;
+}
+
+.main .feed-list li img {
+    width: 100%;
+    display: block;
+    border-radius: 6px;
+}
+
+.main .feed-list li h4 {
+    font-size: 14px;
+    font-weight: 400;
+    color: black;
+}
+
+.main .feed-list li .msg {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    color: #9499a0;
+    margin-top: 6px;
+}
+
+.main .feed-list li .msg .up_icon {
+    width: 17px;
+    height: 17px;
+    margin-right: 4px;
+}
+
+.main .refresh {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    border: 1px solid #dedede;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 12px;
+}
